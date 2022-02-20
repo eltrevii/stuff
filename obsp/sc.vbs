@@ -1,6 +1,6 @@
 Const strProgramTitle = "OBS Studio"
 Const strProgram = "%localappdata%\obsp\bin\64bit\obs64.exe"
-Const strWorkDir = "%USERPROFILE%"
+Const strWorkDir = "%localappdata%\obsp\bin\64bit"
 Dim objShortcut, objShell
 Set objShell = WScript.CreateObject ("Wscript.Shell")
 strLPath = objShell.SpecialFolders ("Desktop")
