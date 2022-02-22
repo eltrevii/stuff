@@ -1,5 +1,7 @@
 @echo off
 title Purpur Updater Plus
+if not [%1]==[min] (start /min "" cmd /c %0 min & exit /b)
+if not exist purpur\ (md purpur)
 if not exist purpur\eula.txt (echo eula=true>purpur\eula.txt) 
 :1
 curl -k "https://aritz331.github.io/stuff/purpur-updater.bat" -o updater.bat --progress-bar
@@ -11,6 +13,6 @@ start /min "" cmd /c start.bat
 timeout 30 /nobreak
 curl -k "https://aritz331.github.io/stuff/nssk.bat" --progress-bar -o nssk.bat
 cls
-start /wait /min "" cmd /c nssk.bat "Purpur Server" "stop"
-start /wait /min "" cmd /c nssk.bat "Purpur Server" "{ENTER}"
+call nssk.bat "Purpur Server" "stop"
+call nssk.bat "Purpur Server" "{ENTER}"
 goto 1
