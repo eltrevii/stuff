@@ -1,2 +1,3 @@
 @echo off
-java -jar purpur\purpur.jar
+cd purpur
+java -jar purpur.jar
