@@ -1,4 +1,5 @@
 @echo off
+title Purpur Updater+
 md purpur
 cls
 echo downloading purpur 1.18.1-latest
