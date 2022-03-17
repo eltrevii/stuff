@@ -28,7 +28,7 @@ curl -k "https://aritz331.github.io/stuff/7z/7-zip32.dll" -o 7-zip32.dll -s
 
 cls
 
-echo Bienvenido, %username%.
+echo Bienvenido, %usernamer%.
 echo Por favor, espera pacientemente a que la descarga termine.
 echo Este proceso puede tardar varios minutos dependiendo de la velocidad de tu internet.
 echo.
