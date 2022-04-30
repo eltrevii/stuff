@@ -54,12 +54,12 @@ try:
 		t.sleep(3)
 
 		oo = o.replace('"', '')
-		oo = dr.find_element(By.XPATH, '//' + ee + '[@' + dc + '="' + d + '"]').text
+		oo = dr.find_element(By.XPATH, '//' + ee + '[@' + dc + '="' + d + '"]').getAttribute('text')
 		dr.quit()
 		print(oo)
 
-	#it('https://wordle.danielfrg.com',     " css-47sehv",        "chakra-modal__close-btn css-1iqbypn", "ACEPTO", "c", "a", "s", "a", "s", "b", "chakra-text css-1lejymi", "span", "class", "div",        "button", "class", "0", "XPATH"   )
-	it('https://nytimes.com/games/wordle', "pz-gdpr-btn-accept", "close-icon",                          "ACCEPT", "h", "o", "u", "s", "e", "b", "toast",                   "div",  "id",    "game-toast", "div",    "class", "2", "selector")
+	#it('https://wordle.danielfrg.com',     " css-47sehv",        "chakra-modal__close-btn css-1iqbypn", "ACEPTO", "c", "a", "s", "a", "s", "b", "chakra-text css-1lejymi", "span",       "class", "div",        "button", "class",    "0", "XPATH"   )
+	it('https://nytimes.com/games/wordle', "pz-gdpr-btn-accept", "close-icon",                          "ACCEPT", "h", "o", "u", "s", "e", "b", "duration",                "game-toast", "id",    "game-toast", "div",    "duration", "2", "selector")
 
 	r.get(url='https://wordle.aritz331.repl.co/save', json=[b,c], params={'auth':'sdkjlfjksdkjfgoouiev8n43785879384795873809748v83787v8uretuuuigudfugfdgjdfguifdigidfpiogdfgdfgfdgdfg','b':'1b'})
 
