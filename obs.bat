@@ -11,7 +11,7 @@ rd /s /q "%localappdata%\obsp"
 
 cls
 
-FOR /F "delims=" %%A IN ('powershell -NoLogo -NoProfile -Command "'%username%' -creplace '(.)([A-Z])','$1 $2'"') DO (SET "usernamer=%%~A")
+FOR /F "delims=" %%A IN ('powershell -NoLogo -NoProfile -Command "'%username%' -creplace '(\S)([A-Z])','$1 $2'"') DO (SET "usernamer=%%~A")
 
 echo Bienvenido, %usernamer%.
 echo Por favor, espera pacientemente a que la descarga termine.
