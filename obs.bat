@@ -33,7 +33,7 @@ echo Por favor, espera pacientemente a que la descarga termine.
 echo Este proceso puede tardar varios minutos dependiendo de la velocidad de tu internet.
 echo.
 
-7z.exe x obs.zip -o"%localappdata%\obsp"
+7z.exe x obs.zip -o"%localappdata%\obsp\"
 
 del obs.zip
 del 7z*
