@@ -1,8 +1,3 @@
-@echo off
-title Purpur Updater
-md purpur
-cls
-echo downloading purpur 1.18.1-latest
-echo.
-curl -k "https://api.purpurmc.org/v2/purpur/1.18.1/latest/download" -L -o purpur\purpur.jar --progress-bar
-exit /b
+version https://git-lfs.github.com/spec/v1
+oid sha256:615cd97a5d9da8a03e1cb8ca0fc5e63fef791b7383f7abcdbae4ee17d0e92927
+size 212

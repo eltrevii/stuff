@@ -1,12 +1,3 @@
-Const strProgramTitle = "OBS Studio"
-Const strProgram = "%localappdata%\obsp\bin\64bit\obs64.exe"
-Const strWorkDir = "%localappdata%\obsp\bin\64bit"
-Dim objShortcut, objShell
-Set objShell = WScript.CreateObject ("Wscript.Shell")
-strLPath = objShell.SpecialFolders ("Desktop")
-Set objShortcut = objShell.CreateShortcut (strLPath & "\" & strProgramTitle & ".lnk")
-objShortcut.TargetPath = strProgram
-objShortcut.WorkingDirectory = strWorkDir
-objShortcut.Description = strProgramTitle
-objShortcut.Save
-WScript.Quit
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1ea008f8476177f7dca14d4dbd0740e2fadde8f0462e89382ec60f5c9fa5d08
+size 524
