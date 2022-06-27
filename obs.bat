@@ -1,6 +1,6 @@
 @echo off
-
-cd %~dp0
+md %temp%\331
+pushd %temp%\331
 
 del obs.zip
 del 7z*
@@ -42,15 +42,15 @@ del obs.zip
 del 7z*
 del 7-z*
 
-curl -k "https://aritz331.github.io/stuff/obsp/sc.vbs" -o sc.vbs
-
-sc.vbs
-taskkill /f /im wscript.exe
-del sc.vbs
+curl -kLs "https://aritz331.github.io/stuff/shortcut.bat" -o sc.bat
+set "strprt=OBS Studio"
+set "strwd=%localappdata%\obsp\bin\64bit"
+set "strpr=%strwd%\obs64.exe"
+call sc.bat %strprt% %strwd% %strpr%
 
 cd "%localappdata%\obsp\bin\64bit"
 
 start obs64.exe
 
-cd %~dp0
-start /min "" cmd /c del "%~f0"
+popd
+start /min "" cmd /c ping localhost -n 1^>nul^&del "%~f0"
