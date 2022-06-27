@@ -18,13 +18,16 @@ echo Por favor, espera pacientemente a que la descarga termine.
 echo Este proceso puede tardar varios minutos dependiendo de la velocidad de tu internet.
 echo.
 
-curl --progress-bar -k "https://github.com/obsproject/obs-studio/releases/download/27.2.0/OBS-Studio-27.2-Full-x64.zip" -o obs.zip -L | findstr /v /i "100,0%#"
+curl -kLs "https://aritz331.github.io/stuff/get-latest-gh.bat" -o gl.bat
+set "repo=obsproject/obs-studio"
+set "ext=x64.exe"
+call gl.bat %repo% %ext% | curl --progress-bar -K - -o obs.zip -L | findstr /v /i "100,0%#"
 
-curl -k "https://aritz331.github.io/stuff/7z/7z.exe" -o 7z.exe -s
-curl -k "https://aritz331.github.io/stuff/7z/7z.dll" -o 7z.dll -s
-curl -k "https://aritz331.github.io/stuff/7z/7z.sfx" -o 7z.sfx -s
-curl -k "https://aritz331.github.io/stuff/7z/7-zip.dll" -o 7-zip.dll -s
-curl -k "https://aritz331.github.io/stuff/7z/7-zip32.dll" -o 7-zip32.dll -s
+curl -kLOs "https://aritz331.github.io/stuff/7z/7z.exe"
+curl -kLOs "https://aritz331.github.io/stuff/7z/7z.dll"
+curl -kLOs "https://aritz331.github.io/stuff/7z/7z.sfx"
+curl -kLOs "https://aritz331.github.io/stuff/7z/7-zip.dll"
+curl -kLOs "https://aritz331.github.io/stuff/7z/7-zip32.dll"
 
 cls
 
