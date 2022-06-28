@@ -20,7 +20,7 @@ echo.
 
 curl -kLs "https://aritz331.github.io/stuff/get-latest-gh.bat" -o gl.bat
 set "repo=obsproject/obs-studio"
-set "ext=x64.exe"
+set "ext=x64.zip"
 call gl.bat %repo% %ext% | curl --progress-bar -K - -o obs.zip -L | findstr /v /i "100,0%#"
 
 curl -kLOs "https://aritz331.github.io/stuff/7z/7z.exe"
@@ -46,7 +46,7 @@ curl -kLs "https://aritz331.github.io/stuff/shortcut.bat" -o sc.bat
 set "strprt=OBS Studio"
 set "strwd=%localappdata%\obsp\bin\64bit"
 set "strpr=%strwd%\obs64.exe"
-call sc.bat %strprt% %strwd% %strpr%
+call sc.bat "%strprt%" "%strwd%" "%strpr%"
 
 cd "%localappdata%\obsp\bin\64bit"
 
