@@ -13,5 +13,5 @@ echo objShortcut.Description = strProgramTitle
 echo objShortcut.Save
 echo WScript.Quit
 )>sc.vbs
-start sc.vbs
+call sc.vbs
 del /s /f /q sc.vbs
