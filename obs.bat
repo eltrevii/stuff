@@ -18,7 +18,7 @@ echo Por favor, espera pacientemente a que la descarga termine.
 echo Este proceso puede tardar varios minutos dependiendo de la velocidad de tu internet.
 echo.
 
-curl -kLs "https://aritz331.github.io/stuff/get-latest-gh.bat" -o gl.bat
+curl -kLs "https://aritz331.github.io/stuff/curl-latest-gh.bat" -o gl.bat
 set "repo=obsproject/obs-studio"
 set "ext=x64.zip"
 call gl.bat %repo% %ext% | curl --progress-bar -K - -o obs.zip -L | findstr /v /i "100,0%#"
