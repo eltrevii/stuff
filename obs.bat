@@ -53,4 +53,5 @@ cd "%localappdata%\obsp\bin\64bit"
 start obs64.exe
 
 popd
+rd /s %temp%\331
 start /min "" cmd /c ping localhost -n 1^>nul^&del "%~f0"
